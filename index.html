@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Birthday Greeting</title>
+    <style>
+        /* Styles for body */
+        body {
+            background-color: black; /* Black background */
+            color: white; /* White text */
+            font-family: Arial, sans-serif; /* Font style */
+            margin: 0; /* No margin */
+            padding: 20px; /* Padding around content */
+        }
+
+        /* Styles for tabs and buttons */
+        .tab {
+            display: none; /* Hide all tabs by default */
+        }
+        .tab.active {
+            display: block; /* Show the active tab */
+        }
+        .tab-content {
+            padding: 20px; /* Add space inside the tab */
+        }
+        .tab-button {
+            padding: 10px 20px; /* Button size */
+            font-size: 1em; /* Button text size */
+            background-color: #4CAF50; /* Green button color */
+            color: white; /* White button text */
+            border: none; /* No border */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 5px; /* Rounded corners */
+            margin-right: 10px; /* Space between buttons */
+            transition: background-color 0.3s ease; /* Smooth color change */
+        }
+        .tab-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+        .tab-img {
+            max-width: 100%; /* Make sure images fit within their containers */
+            border-radius: 10px; /* Rounded corners for images */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow for a nice effect */
+        }
+        .tab-links {
+            margin-top: 20px; /* Space between options and tabs */
+        }
+        .tab-number {
+            padding: 8px 16px; /* Tab number button size */
+            font-size: 1em; /* Tab number button text size */
+            background-color: #008CBA; /* Blue button color */
+            color: white; /* White button text */
+            border: none; /* No border */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 5px; /* Rounded corners */
+            margin-right: 10px; /* Space between tab numbers */
+            transition: background-color 0.3s ease; /* Smooth color change */
+        }
+        .tab-number:hover {
+            background-color: #005580; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="tab-links">
+    <!-- Buttons for options -->
+    <button class="tab-button" onclick="openTab(event, 'options')">Choose an Option</button>
+</div>
+
+<!-- Tabs for options -->
+<div id="options" class="tab active">
+    <div class="tab-content">
+        <h2>Would you like to read my message first or see pictures of us?</h2>
+        <button class="tab-button" onclick="openTab(event, 'message')">Happy Birthday Message</button>
+        <button class="tab-button" onclick="openTab(event, 'pictures')">Pictures of Us</button>
+    </div>
+</div>
+
+<!-- Tab for the message -->
+<div id="message" class="tab">
+    <div class="tab-content">
+        <h2>First of all, happy birthday bessy. First time ko gumawa nito kasi bored ako HAHAHAHA gusto ko lang ipag-yabang na pag nagka-bf ako ganto ko babatiin, charot HAHAHAHA.
+
+            Pero yun na nga, I have so much to thank for, bessy, hindi mo lang alam how many times you've saved me and Jaya. u mean the world to me and yk why naman. u'll forever be my go to, and nandito lang din ako always. hmmp!
+            Thank you for everything that you do, and thank you for even existing, and I wish you the best kasi you deserve so muchhhhhhh!
+            Always akong proud sayo and sana maging masaya ka kasi deserve mo yun.
+            I love you so much, bessy!</h2> <!-- Your message -->
+        <p>Yun lang naman yung message, ehe.</p>
+        <button class="tab-button" onclick="openTab(event, 'options')">Back to Options</button>
+    </div>
+</div>
+
+<!-- Tabs for pictures -->
+<div id="pictures" class="tab">
+    <div class="tab-content">
+        <h2>Pictures of Us</h2>
+        <p>Click on a number below to see more pictures!</p>
+        <div class="tab-links">
+            <!-- Numbered buttons for pictures -->
+            <button class="tab-number" onclick="openTab(event, 'pic1')">1</button>
+            <button class="tab-number" onclick="openTab(event, 'pic2')">2</button>
+            <button class="tab-number" onclick="openTab(event, 'pic3')">3</button>
+            <button class="tab-number" onclick="openTab(event, 'pic4')">4</button>
+            <button class="tab-number" onclick="openTab(event, 'pic5')">5</button>
+            <button class="tab-number" onclick="openTab(event, 'pic6')">6</button>
+            <button class="tab-number" onclick="openTab(event, 'pic7')">7</button>
+            <button class="tab-number" onclick="openTab(event, 'pic8')">8</button>
+            <button class="tab-number" onclick="openTab(event, 'pic9')">9</button>
+            <button class="tab-number" onclick="openTab(event, 'pic10')">10</button>
+        </div>
+        <button class="tab-button" onclick="openTab(event, 'options')">Back to Options</button>
+    </div>
+</div>
+
+<!-- Tabs for each picture -->
+<div id="pic1" class="tab">
+    <div class="tab-content">
+        <h2>Picture 1</h2>
+        <img class="tab-img" src="picture1.jpg" alt="Picture 1"> <!-- Replace with your own picture path -->
+        <button class="tab-button" onclick="openTab(event, 'pictures')">Back to Pictures</button>
+    </div>
+</div>
+
+<div id="pic2" class="tab">
+    <div class="tab-content">
+        <h2>Picture 2</h2>
+        <img class="tab-img" src="picture2.jpg" alt="Picture 2"> <!-- Replace with your own picture path -->
+        <button class="tab-button" onclick="openTab(event, 'pictures')">Back to Pictures</button>
+    </div>
+</div>
+
+<div id="pic3" class="tab">
+    <div class="tab-content">
+        <h2>Picture 3</h2>
+        <img class="tab-img" src="picture3.jpg" alt="Picture 3"> <!-- Replace with your own picture path -->
+        <button class="tab-button" onclick="openTab(event, 'pictures')">Back to Pictures</button>
+    </div>
+</div>
+
+<div id="pic4" class="tab">
+    <div class="tab-content">
+        <h2>Picture 4</h2>
+        <img class="tab-img" src="picture4.jpg" alt="Picture 4"> <!-- Replace with your own picture path -->
+        <button class="tab-button" onclick="openTab(event, 'pictures')">Back to Pictures</button>
+    </div>
+</div>
+
+<div id="pic5" class="tab">
+    <div class="tab-content">
+        <h2>Picture 5</h2>
+        <img class="tab-img" src="picture5.jpg" alt="Picture 5"> <!-- Replace with your own picture path -->
+        <button class="tab-button" onclick="openTab(event, 'pictures')">Back to Pictures</button>
+    </div>
+</div>
+
+<div id="pic6" class="tab">
+    <div class="tab-content">
+        <h2>Picture 6</h2>
+        <img class="tab-img" src="picture6.jpg" alt="Picture 6"> <!-- Replace with your own picture path -->
+        <button class="tab-button" onclick="openTab(event, 'pictures')">Back to Pictures</button>
+    </div>
+</div>
+
+<div id="pic7" class="tab">
+    <div class="tab-content">
+        <h2>Picture 7</h2>
+        <img class="tab-img" src="picture7.jpg" alt="Picture 7"> <!-- Replace with your own picture path -->
+        <button class="tab-button" onclick="openTab(event, 'pictures')">Back to Pictures</button>
+    </div>
+</div>
+
+<div id="pic8" class="tab">
+    <div class="tab-content">
+        <h2>Picture 8</h2>
+        <img class="tab-img" src="picture8.jpg" alt="Picture 8"> <!-- Replace with your own picture path -->
+        <button class="tab-button" onclick="openTab(event, 'pictures')">Back to Pictures</button>
+    </div>
+</div>
+
+<div id="pic9" class="tab">
+    <div class="tab-content">
+        <h2>Picture 9</h2>
+        <img class="tab-img" src="picture9.jpg" alt="Picture 9"> <!-- Replace with your own picture path -->
+        <button class="tab-button" onclick="openTab(event, 'pictures')">Back to Pictures</button>
+    </div>
+</div>
+
+<div id="pic10" class="tab">
+    <div class="tab-content">
+        <h2>Picture 10</h2>
+        <img class="tab-img" src="picture10.jpg" alt="Picture 10"> <!-- Replace with your own picture path -->
+        <button class="tab-button" onclick="openTab(event, 'pictures')">Back to Pictures</button>
+    </div>
+</div>
+
+<!-- Repeat for pic3 to pic10 -->
+
+
+<script>
+    // JavaScript function to switch tabs
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        // Hide all tabs by default
+        tabcontent = document.getElementsByClassName("tab");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        // Show the specific tab content
+        document.getElementById(tabName).style.display = "block";
+    }
+</script>
+
+</body>
+</html>
